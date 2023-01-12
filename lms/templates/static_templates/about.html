@@ -1,0 +1,32 @@
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../main.html" />
+<%namespace name='static' file='../static_content.html'/>
+
+<%block name="pagetitle">${_("About")}</%block>
+
+<main id="main" aria-label="Content" tabindex="-1">
+    <section class="container about">
+        <h1>
+            <%block name="pageheader">${page_header or _("About")}</%block>
+        </h1>
+        <h2>Learning platform</h2>
+        <p>
+            <%block name="pagecontent">{{ PLATFORM_NAME }} is the online learning platform for students. Powered by <a href="https://open.edx.org">Open edX</a>. It runs with <a href="https://docs.tutor.overhang.io">Tutor</a>, with the customized <a href="https://github.com/GirlCodeZA/indigo">Indigo</a> theme.</%block>
+        </p>
+        <p>
+            <a href="https://docs.tutor.overhang.io" rel="noopener" target="_blank">
+              <img src="${static.url('images/tutor-logo.png')}" alt="Tutor logo" height="42" />
+            </a>
+            <a href="https://open.edx.org/" rel="noopener" target="_blank">
+              <img src="${static.url('images/openedx-logo.png')}" alt="Open edX logo" width="140" />
+            </a>
+        </p>
+
+        <h2>Talencia Global</h2>
+        <p>
+            Girlcode is a registered NPO (158-642) aimed at empowering young girls and womens through technology.
+            We believe that the more women get involved with technology, design, development and leadership, the more successful and diverse companies and their products will be in the future.
+        </p>
+    </section>
+</main>
