@@ -15,43 +15,29 @@ from openedx.core.djangolib.markup import HTML, Text
     <script type="text/javascript" src="${static.url('common/js/vendor/bootstrap.bundle.js')}"></script>
 % endif
 </%block>
-
-<!-- Hero -->
-<!--
-  This example requires Tailwind CSS v2.0+ 
-  
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/forms'),
-    ]
-  }
-  ```
--->
-<div class="page min-vw-100" style="font-family:'Inter';">
-   <div class="header" style="background: linear-gradient(180deg, #FFFFFF 0%, #FFFFFF 25%, rgba(247, 247, 247, 0) 50%, rgba(101, 112, 132, 0) 65.65%, rgba(89, 89, 89, 0.04) 100%);
-   background-blend-mode: multiply; width: inherit;">
-    <div class="header-cont py-3 px-sm-0 row mx-0 justify-content-xl-between">
-        <div class="header-txt col-sm-12 col-xl-5 py-5 ml-xl-5">
-            <div class="d-flex flex-wrap flex-column align-content-end">
-                <h3 class="my-2 font-weight-bold">WE GOT WHAT</h3>
-                <h3 class="font-weight-bold">YOU NEED!</h3>
-                <p class="my-2">A Discovery Program with Talent Accelerator, Startup Incubator,</p>
-                <p>grab your chance to be with us in your entrepreneurship track.</p>
-                <a type="submit" href="/register${login_query()}"><button class="btn mt-3 mb-3" style="background: linear-gradient(98.94deg, #014384 -10.01%, #0192D9 107.52%); box-shadow: 0px 20px 24px -4px rgba(16, 24, 40, 0.08), 0px 8px 8px -4px rgba(16, 24, 40, 0.03); border-radius: 5px; height: 70px; width: 220px;"><p class="text-white text-center m-0">Get Started</p></button></a>
-                <p class="head-sub-txt mt-3">Over 40% of Students across India and 300+ companies use SkillAssure.</p>
+<div class="" style="font-family:'Inter';">
+    <main>
+        <div class="header" style="background: linear-gradient(180deg, #FFFFFF 0%, #FFFFFF 25%, rgba(247, 247, 247, 0) 50%, rgba(101, 112, 132, 0) 65.65%, rgba(89, 89, 89, 0.04) 100%);
+        background-blend-mode: multiply; width: inherit;">
+            <div class="header-cont py-3 px-sm-0 row mx-0 justify-content-xl-between">
+                <div class="header-txt col-sm-12 col-xl-5 py-5 ml-xl-5">
+                    <div class="d-flex flex-wrap flex-column align-content-end">
+                        <h3 class="my-2 font-weight-bold">WE GOT WHAT</h3>
+                        <h3 class="font-weight-bold">YOU NEED!</h3>
+                        <p class="my-2">A Discovery Program with Talent Accelerator, Startup Incubator,</p>
+                        <p>grab your chance to be with us in your entrepreneurship track.</p>
+                        <a type="submit" href="/register${login_query()}"><button class="btn mt-3 mb-3" style="background: linear-gradient(98.94deg, #014384 -10.01%, #0192D9 107.52%); box-shadow: 0px 20px 24px -4px rgba(16, 24, 40, 0.08), 0px 8px 8px -4px rgba(16, 24, 40, 0.03); border-radius: 5px; height: 70px; width: 220px;"><p class="text-white text-center m-0">Get Started</p></button></a>
+                        <p class="head-sub-txt mt-3">Over 40% of Students across India and 300+ companies use SkillAssure.</p>
+                    </div>
+                </div>
+                <div class="header-img col-sm-12 col-xl-6">
+                    <img class="float-right" style="max-width:75%;" src="${static.url('images/model.svg')}">
+                </div>
             </div>
         </div>
-        <div class="header-img col-sm-12 col-xl-6">
-            <img class="float-right" style="max-width:75%;" src="${static.url('images/model.svg')}">
-        </div>
-    </div>
-   </div>
+    </main>
+</div>
+<div class="page min-vw-100" style="font-family:'Inter';">
    <div class="content" style="width: inherit;">
         <div class="cont-headtxt w-25 mx-auto my-5" style="min-width:75%">
             <h2 class="text-center text-justify text-wrap">We Measure Candidate's Skills, Competency and Ability</h2> 
