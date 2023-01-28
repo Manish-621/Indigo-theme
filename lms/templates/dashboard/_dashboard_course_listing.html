@@ -58,6 +58,11 @@ from lms.djangoapps.experiments.utils import UPSELL_TRACKING_FLAG
 
 <%namespace name='static' file='../static_content.html'/>
 
+% if not uses_bootstrap:
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    ## xss-lint: disable=mako-invalid-js-filter
+    <script type="text/javascript" src="${static.url('common/js/vendor/bootstrap.bundle.js')}"></script>
+% endif
 <li class="course-item">
   % if display_course_modes_on_dashboard:
     <%
@@ -79,7 +84,7 @@ from lms.djangoapps.experiments.utils import UPSELL_TRACKING_FLAG
           lang="${course_overview.language}"
         % endif
       >
-<article class="course${mode_class}" aria-labelledby="course-title-${enrollment.course_id}" id="course-card-${course_card_index}">
+<article class="course${mode_class} card w-25" aria-labelledby="course-title-${enrollment.course_id}" id="course-card-${course_card_index}">
   <% course_target = course_home_url(course_overview.id) %>
   <section class="details" aria-labelledby="details-heading-${enrollment.course_id}">
       <h2 class="hd hd-2 sr" id="details-heading-${enrollment.course_id}">${_('Course details')}</h2>
@@ -306,7 +311,7 @@ from lms.djangoapps.experiments.utils import UPSELL_TRACKING_FLAG
             </div>
           </div>
 
-          <div class="continue-button">
+          <div class="continue-button" style="background: linear-gradient(98.94deg, #014384 -10.01%, #0192D9 107.52%); box-shadow: 0px 20px 24px -4px rgba(16, 24, 40, 0.08), 0px 8px 8px -4px rgba(16, 24, 40, 0.03);">
               % if (show_courseware_link or is_unfulfilled_entitlement) and not is_course_expired:
                 % if course_overview.has_ended():
                   % if not is_unfulfilled_entitlement:
