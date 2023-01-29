@@ -80,7 +80,7 @@ from lms.djangoapps.experiments.utils import UPSELL_TRACKING_FLAG
     <% mode_class = '' %>
   % endif
        <% crd_bg = "${static.url('images/card-bg.png')}" %>
-      <div class="course-container card w-25"
+      <div class="course-container col-xl-5 card w-25"
         % if getattr(course_overview, 'language'):
           lang="${course_overview.language}"
         % endif
