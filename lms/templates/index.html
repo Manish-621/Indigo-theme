@@ -13,19 +13,23 @@ from openedx.core.djangolib.markup import HTML, Text
 </head>
 
 <main id="main" aria-label="Content" tabindex="-1">
-    <section class="">
-        <section class="home">
-            <header>
-              <div class="outer-wrapper">
-                <div class="title">
-                  <div class="heading-group">
-                  </div>
-                 </div>
-                </div>
-            </header>          
+    <section class="home">
+      <header>
+        <div class="outer-wrapper">
+          <div class="title">
+            <div class="heading-group">
+              % if homepage_overlay_html:
+                ${homepage_overlay_html | n, decode.utf8}
+              % else:
+                <%include file="index_overlay.html" />
+              % endif
+            </div>
+          </div>
+        </div>
+      </header>
     </section>
 </main>
-<section class="banner">
+<!--<section class="banner">
 <div class="d-flex flex-column align-items-center mx-0" style="background: linear-gradient(180deg, #FFFFFF 0%, #FFFFFF 25%, rgba(247, 247, 247, 0) 50%, rgba(101, 112, 132, 0) 65.65%, rgba(89, 89, 89, 0.04) 100%);
             background-blend-mode: multiply; font-family:'Inter';">
                 <div id="carouselExampleSlidesOnly" class="row carousel slide" data-bs-ride="carousel">
@@ -60,7 +64,7 @@ from openedx.core.djangolib.markup import HTML, Text
                     </div>
                 </div>
 </div>
-</section>
+</section>-->
 <div class="content" style="width: inherit; font-family: 'Inter';">
     <div class="cont-headtxt w-25 mx-auto my-5" style="min-width:75%">
         <h2 class="text-center text-justify text-wrap">We Measure Candidate's Skills, Competency and Ability</h2> 
