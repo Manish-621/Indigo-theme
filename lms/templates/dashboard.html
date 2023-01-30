@@ -154,8 +154,7 @@ from common.djangoapps.student.models import CourseEnrollment
           % endif
 
           % if len(course_entitlements + course_enrollments) > 0:
-            <ul class="listing-courses">
-              <div class="row flex-wrap"> 
+            <ul class="listing-courses row flex-wrap d-flex"> 
             <%
                 share_settings = configuration_helpers.get_value(
                     'SOCIAL_SHARING_SETTINGS',
@@ -234,7 +233,6 @@ from common.djangoapps.student.models import CourseEnrollment
                      ${_("Click to load all enrolled courses")}
                 </a>
             % endif
-              </div>
             </ul>
           % else:
             <div class="empty-dashboard-message">
