@@ -41,7 +41,7 @@ from openedx.core.djangoapps.user_authn.toggles import should_redirect_to_authn_
   % if allows_login:
     % if can_discover_courses:
       <div class="mobile-nav-item hidden-mobile nav-item">
-        <a style="font-family: 'Inter';" href="/courses">${_('Explore courses')}</a>
+        <a style="font-family: 'Inter';" href="/courses">${_('Explore Courses')}</a>
       </div>
     %endif
   % endif
@@ -52,7 +52,7 @@ from openedx.core.djangoapps.user_authn.toggles import should_redirect_to_authn_
         % if allow_public_account_creation:
           % if should_redirect_to_authn_mfe:
             <div class="mobile-nav-item hidden-mobile nav-item">
-                <a class="register-btn" href="${settings.AUTHN_MICROFRONTEND_URL}/register${login_query()}">${_("Register")}</a>
+                <a class="register-btn" style="font-family: 'Inter';" href="${settings.AUTHN_MICROFRONTEND_URL}/register${login_query()}">${_("Register")}</a>
             </div>
           % else:
             <div class="mobile-nav-item hidden-mobile nav-item">
@@ -62,11 +62,11 @@ from openedx.core.djangoapps.user_authn.toggles import should_redirect_to_authn_
         % endif
         % if should_redirect_to_authn_mfe:
           <div class="mobile-nav-item hidden-mobile nav-item">
-              <a class="signin-btn btn" style="font-family:'Inter'; background: linear-gradient(98.94deg, #014384 -10.01%, #0192D9 107.52%); box-shadow: 0px 20px 24px -4px rgba(16, 24, 40, 0.08), 0px 8px 8px -4px rgba(16, 24, 40, 0.03); border-radius: 5px; height: 40px; width: 100px;" href="${settings.AUTHN_MICROFRONTEND_URL}/login${login_query()}">${_("Sign in")}</a>
+              <a class="signin-btn btn text-white" style="font-family:'Inter'; background: linear-gradient(98.94deg, #014384 -10.01%, #0192D9 107.52%); box-shadow: 0px 20px 24px -4px rgba(16, 24, 40, 0.08), 0px 8px 8px -4px rgba(16, 24, 40, 0.03); border-radius: 5px; height: 40px; width: 100px;" href="${settings.AUTHN_MICROFRONTEND_URL}/login${login_query()}">${_("Sign in")}</a>
           </div>
         % else:
           <div class="mobile-nav-item hidden-mobile nav-item">
-              <a class="signin-btn btn" style="font-family:'Inter'; background: linear-gradient(98.94deg, #014384 -10.01%, #0192D9 107.52%); box-shadow: 0px 20px 24px -4px rgba(16, 24, 40, 0.08), 0px 8px 8px -4px rgba(16, 24, 40, 0.03); border-radius: 5px; height: 40px; width: 100px;" href="/login${login_query()}">${_("Sign in")}</a>
+              <a class="signin-btn btn text-white" style="font-family:'Inter'; background: linear-gradient(98.94deg, #014384 -10.01%, #0192D9 107.52%); box-shadow: 0px 20px 24px -4px rgba(16, 24, 40, 0.08), 0px 8px 8px -4px rgba(16, 24, 40, 0.03); border-radius: 5px; height: 40px; width: 100px;" href="/login${login_query()}">${_("Sign in")}</a>
           </div>
         % endif
       % endif
